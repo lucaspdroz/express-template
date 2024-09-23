@@ -22,13 +22,13 @@ app.get("/users/:userId", function (req: Request, res: Response) {
   res.send(user);
 });
 
-app.get('/resource', (req, res) => {
+app.get('/resource', function (req: Request, res: Response) {
   res.status(200).json({
       message: 'Data received successfully!',
   });
 });
 
-app.post('/resource', (req, res) => {
+app.post('/resource', function (req: Request, res: Response) {
   const { name, email } = req.body;
 
   // Log the incoming data to check if it's correct
