@@ -10,7 +10,7 @@ const users = [
 
 
 app.get("/", function (req: Request, res: Response) {
-  res.send("Bohr Express template");
+  res.send("Hello template");
 });
 
 app.get("/users", function (req: Request, res: Response) {
@@ -22,13 +22,13 @@ app.get("/users/:userId", function (req: Request, res: Response) {
   res.send(user);
 });
 
-app.get('/api', (req, res) => {
+app.get('/resource', (req, res) => {
   res.status(200).json({
       message: 'Data received successfully!',
   });
 });
 
-app.post('/api', (req, res) => {
+app.post('/resource', (req, res) => {
   const { name, email } = req.body;
 
   // Log the incoming data to check if it's correct
