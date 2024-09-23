@@ -22,12 +22,6 @@ app.get("/users/:userId", function (req: Request, res: Response) {
   res.send(user);
 });
 
-app.get('/resource', function (req: Request, res: Response) {
-  res.status(200).json({
-      message: 'Data received successfully!',
-  });
-});
-
 app.post('/resource', function (req: Request, res: Response) {
   const { name, email } = req.body;
 
