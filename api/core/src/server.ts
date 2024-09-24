@@ -22,6 +22,11 @@ app.get("/users/:userId", function (req: Request, res: Response) {
   res.send(user);
 });
 
+app.get("/resource", function (req: Request, res: Response) {
+  res.send("Hello resource");
+});
+
+
 app.post('/resource', function (req: Request, res: Response) {
   const { name, email } = req.body;
 
